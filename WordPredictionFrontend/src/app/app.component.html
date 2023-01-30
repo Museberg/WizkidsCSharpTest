@@ -1,0 +1,27 @@
+<div>
+  <textarea name="userInput" [(ngModel)]="userInput" (ngModelChange)="getSuggestions()"
+            style="width: 25%; height: 150px;">
+    
+  </textarea>
+</div>
+
+<div>
+  <div style="width: 50%; float: left;">
+    <h3>Web service sugesstions</h3>
+    <ul>
+      <li *ngFor="let word of webPredictions">
+        <span>{{word}}</span>
+      </li>
+    </ul>
+  </div>
+
+  <div style="width: 50%; float: right;">
+    <h3>Local database suggestions</h3>
+    <ul>
+      <li *ngFor="let word of dictionaryPredictions">
+        <span>{{word}}</span>
+      </li>
+    </ul>
+  </div>
+
+</div>
